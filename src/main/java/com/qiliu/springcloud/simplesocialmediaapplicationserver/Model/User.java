@@ -2,6 +2,7 @@ package com.qiliu.springcloud.simplesocialmediaapplicationserver.Model;
 
 import java.util.Set;
 
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -26,6 +27,10 @@ public class User {
 	
 	private String passwordConfirm;
 	
+	@ElementCollection(targetClass=Role.class)
+	@ManyToMany
+	@JoinTable(name="user_role", joinColumns = @JoinColumn(name="user_id"), 
+          inverseJoinColumns = @JoinColumn(name="role_id"))
 	private Set<Role> roles;
 	
 	private Integer enabled;
@@ -34,11 +39,10 @@ public class User {
 		// TODO Auto-generated constructor stub
 	}
 	
-    public User(String name, String password, String passwordConfirm, Integer enabled) {
+    public User(String name, String password, String passwordConfirm) {
     	this.userName = name;
     	this.password = password;
     	this.passwordConfirm = passwordConfirm;
-    	this.enabled = enabled;
     }
 
 	public String getUserName() {
@@ -66,9 +70,6 @@ public class User {
 		this.passwordConfirm = passwordConfirm;
 	}
     
-	@ManyToMany
-	@JoinTable(name="user_role", joinColumns = @JoinColumn(name="user_id"), 
-	     inverseJoinColumns = @JoinColumn(name="role_id"))
 	public Set<Role> getRoles() {
 		return roles;
 	}

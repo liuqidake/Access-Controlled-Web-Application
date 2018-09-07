@@ -2,7 +2,9 @@ package com.qiliu.springcloud.simplesocialmediaapplicationserver.Model;
 
 import java.util.Set;
 
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -20,8 +22,16 @@ public class Role {
 	
 	private String name;
 	
-	
+	@ElementCollection(targetClass=User.class)
+	@ManyToMany(mappedBy="roles", fetch=FetchType.LAZY)
 	private Set<User> users;
+	
+	public Role() {
+	}
+	
+	public Role(String name) {
+		this.name = name;
+	}
 
 	public String getName() {
 		return name;
@@ -31,7 +41,6 @@ public class Role {
 		this.name = name;
 	}
     
-	@ManyToMany(mappedBy="roles")
 	public Set<User> getUsers() {
 		return users;
 	}

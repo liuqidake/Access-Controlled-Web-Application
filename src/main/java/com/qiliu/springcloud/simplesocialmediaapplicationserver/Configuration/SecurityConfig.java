@@ -1,4 +1,4 @@
-package com.qiliu.springcloud.simplesocialmediaapplicationserver.configuration;
+package com.qiliu.springcloud.simplesocialmediaapplicationserver.Configuration;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
