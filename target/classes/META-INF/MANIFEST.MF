@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: qiliu
+Build-Jdk: 10.0.2
+Implementation-Title: simple-social-media-application-server
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.qiliu.spring-cloud
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/simple-social-media-application-server
+Created-By: Maven Integration for Eclipse
+
