@@ -2,7 +2,8 @@ package com.qiliu.springcloud.simplesocialmediaapplicationserver.Model;
 
 import java.util.Set;
 
-import javax.persistence.ElementCollection;
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -21,36 +22,39 @@ public class User {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	
-	private String userName;
-	
+    @Column(name="username")
+	private String username;
+    
+    @Column(name="password")
 	private String password;
 	
+    @Column(name="passwordconfirm")
 	private String passwordConfirm;
 	
-	@ElementCollection(targetClass=Role.class)
-	@ManyToMany
+	@ManyToMany(cascade=CascadeType.ALL)
 	@JoinTable(name="user_role", joinColumns = @JoinColumn(name="user_id"), 
           inverseJoinColumns = @JoinColumn(name="role_id"))
 	private Set<Role> roles;
 	
+	@Column(name="enabled")
 	private Integer enabled;
 	
 	public User() {
 		// TODO Auto-generated constructor stub
 	}
 	
-    public User(String name, String password, String passwordConfirm) {
-    	this.userName = name;
+    public User(String username, String password, String passwordConfirm) {
+    	this.username = username;
     	this.password = password;
     	this.passwordConfirm = passwordConfirm;
     }
 
 	public String getUserName() {
-		return userName;
+		return this.username;
 	}
 
-	public void setUserName(String userName) {
-		this.userName = userName;
+	public void setUserName(String username) {
+		this.username = username;
 	}
 
 	public String getPassword() {

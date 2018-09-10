@@ -1,0 +1,10 @@
+/Users/qiliu/msd/simple-social-media-application-server-2/src/main/java/com/qiliu/springcloud/simplesocialmediaapplicationserver/Service/UserServiceImpl.java
+/Users/qiliu/msd/simple-social-media-application-server-2/src/main/java/com/qiliu/springcloud/simplesocialmediaapplicationserver/EncryptionConfiguration/EncryptionConfig.java
+/Users/qiliu/msd/simple-social-media-application-server-2/src/main/java/com/qiliu/springcloud/simplesocialmediaapplicationserver/Configuration/SecurityConfig.java
+/Users/qiliu/msd/simple-social-media-application-server-2/src/main/java/com/qiliu/springcloud/simplesocialmediaapplicationserver/Source/RoleRepository.java
+/Users/qiliu/msd/simple-social-media-application-server-2/src/main/java/com/qiliu/springcloud/simplesocialmediaapplicationserver/Controller/UserController.java
+/Users/qiliu/msd/simple-social-media-application-server-2/src/main/java/com/qiliu/springcloud/simplesocialmediaapplicationserver/Model/Role.java
+/Users/qiliu/msd/simple-social-media-application-server-2/src/main/java/com/qiliu/springcloud/simplesocialmediaapplicationserver/Model/User.java
+/Users/qiliu/msd/simple-social-media-application-server-2/src/main/java/com/qiliu/springcloud/simplesocialmediaapplicationserver/SimpleSocialMediaApplicationServerApplication.java
+/Users/qiliu/msd/simple-social-media-application-server-2/src/main/java/com/qiliu/springcloud/simplesocialmediaapplicationserver/Service/UserService.java
+/Users/qiliu/msd/simple-social-media-application-server-2/src/main/java/com/qiliu/springcloud/simplesocialmediaapplicationserver/Source/UserRepository.java
