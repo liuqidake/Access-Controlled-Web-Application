@@ -1,4 +1,4 @@
-# Simple Social Media Application Server With Spring Boot
+# Access-Controlled Web Application With Spring Boot
 
 This simple application server provides some basic features of user login logout and registration with Spring Security dependency.
 
